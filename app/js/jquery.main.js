@@ -252,12 +252,18 @@
             },
             _checkMenu = function () {
 
-                if( !_menu.hasClass('opened') ) {
+                if( $(window).width() >= 768 ) {
 
-                    $('.site__content-wrap').find('>div').width('100%');
+                    if( !_menu.hasClass('opened') ) {
 
-                } else {
-                    $('.site__content-wrap').find('>div').width('57%');
+                        $('.site__content-wrap').find('>div').width('100%');
+
+                    } else {
+
+                        $('.site__content-wrap').find('>div').width('57%');
+
+                    }
+
                 }
 
             },
