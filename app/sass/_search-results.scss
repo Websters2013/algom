@@ -17,13 +17,22 @@
 
     .active {
       color: #000000;
+      cursor: pointer;
+
+      &:hover {
+        text-decoration: underline;
+      }
+
     }
 
     >div {
       width: 100%;
 
-      >div {
+      >a {
+        display: block;
         margin-bottom: 6px;
+        color: #b2b2b2;
+        cursor: default;
       }
 
     }
@@ -74,6 +83,7 @@
   }
 
 }
+
 @media (min-width: $tablet-portrait) {
 
   .search-results {
