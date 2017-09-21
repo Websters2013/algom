@@ -118,6 +118,10 @@
 
                 _contents.css( { display: 'none' } );
                 curContent.css( { display: 'block' } );
+
+                if ( curContent.find('input').length ) {
+                    curContent.find('input').eq(0).focus();
+                }
             };
 
         //public properties

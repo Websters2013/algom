@@ -1,6 +1,5 @@
 .nice-checkbox {
-  display: inline-block;
-  vertical-align: top;
+  display: block;
   user-select: none;
 
   input[ type = checkbox ] {
@@ -10,7 +9,7 @@
     &:checked + label {
 
       &:before {
-        display: block;
+        opacity: 1;
       }
 
     }
@@ -22,16 +21,17 @@
 
   }
   label {
+    display: block;
     position: relative;
-    display: flex;
     text-align: left;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    height: 20px;
+    font-size: 13px;
+    line-height: 18px;
     padding-left: 25px;
-    color: $nice-checkbox-color;
+    color: #000;
     cursor: pointer;
+    @include main-font1();
+
+    > span { display: block }
 
     &:after,
     &:before {
@@ -40,21 +40,25 @@
     }
 
     &:after {
-      top: 0;
+      top: 1px;
       left: 0;
       width: 15px;
       height: 15px;
-      border: 2px solid $nice-checkbox-after-color;
+      border: 2px solid #cccccc;
+      border-radius: 4px;
     }
 
     &:before {
-      display: none;
-      top: 7px;
-      left: 7px;
-      border-radius: 50%;
-      background: $nice-checkbox-after-color;
-      width: 5px;
-      height: 5px;
+      top: -2px;
+      left: 1px;
+      border: 2px solid #0a4c84;
+      width: 14px;
+      height: 14px;
+      box-sizing: border-box;
+      clip: rect(3px, 14px, 14px, 8px);
+      transform: rotate(45deg);
+      opacity: 0;
+      transition: opacity .2s ease-in-out;
       content: '';
     }
 

@@ -27,16 +27,17 @@
   &__wrap {
     position: relative;
     display: inline-block;
-    padding: 20px;
+    padding: 10px;
     z-index: 2;
   }
 
   &__content {
+    overflow: hidden;
     display: none;
     position: relative;
-    max-width: 620px;
+    max-width: 410px;
     margin: 0 auto;
-    padding: 46px 40px;
+    padding: 42px 20px;
     background-color: #fff;
     border-radius: 4px;
     font-size: 13px;
@@ -71,17 +72,20 @@
     &-btns {
       display: flex;
       flex-direction: column;
-      padding: 10px 0 40px 0;
+      padding: 12px 0 0 0;
 
       a,
       a:visited { color: #000 }
 
       .btn { margin-bottom: 20px }
+
+      .nice-checkbox { margin: 0 }
     }
 
     .btn {
       height: 34px;
-      min-width: 111px;
+      min-width: 118px;
+      padding: 0 33px;
     }
 
     input {
@@ -107,40 +111,28 @@
         color: #b2b2b2;
       }
     }
-  }
 
-  &__success {
-    max-width: 480px;
-    padding: 58px 40px 40px;
-
-    .popup__title {
-      margin-bottom: 16px;
+    .nice-checkbox {
+      margin: 8px 0 22px;
     }
 
-    .btn {
-      margin-top: 24px;
-    }
-  }
-
-  &__thanks {
-    max-width: 480px;
-    padding: 58px 40px 40px;
-
-    .popup__title {
-      margin-bottom: 16px;
-    }
-
-    .btn {
-      margin-top: 24px;
+    &-footer {
+      margin: 20px 0 0;
+      padding: 14px 0 0;
+      border-top: 1px solid #d9d9d9;
     }
   }
 
   &__title {
     display: block;
-    margin-bottom: 25px;
+    margin-bottom: 21px;
     font-size: 20px;
     color: #000;
     @include main-font1();
+  }
+
+  &__subtitle {
+    margin-bottom: 18px;
   }
 
   &__close {
@@ -192,30 +184,14 @@
   .popup {
 
     &__content {
-
-      &-column {
-        width: 50%;
-        padding: 11px 0 0 40px;
-        text-align: left;
-
-        &:first-child {
-          border-right: 1px solid #999999;
-          padding: 11px 40px 0 0;
-        }
-      }
+      padding: 42px 61px;
 
       &-btns {
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-        padding: 10px 0 0 0;
 
         .btn { margin-bottom: 0 }
-      }
-
-      .login,
-      .reset {
-        display: flex;
       }
     }
   }

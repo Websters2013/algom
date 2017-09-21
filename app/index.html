@@ -39,7 +39,10 @@
                 </div>
                 <!-- /site__header-cooperation -->
 
-                <a href="#" class="btn popup__open" data-popup="login">Вход</a>
+                <div class="site__header-btns">
+                    <a href="#" class="btn popup__open" data-popup="login">Вход</a>
+                    <a href="#" class="popup__open" data-popup="registration">Регистрация</a>
+                </div>
 
             </div>
             <!-- /site__header-layout -->
@@ -123,39 +126,73 @@
                    <!-- login -->
                    <form action="#" class="login">
 
-                       <!-- popup__content-column -->
-                       <div class="popup__content-column">
-                           <!-- popup__title -->
-                           <h2 class="popup__title">Вход</h2>
-                           <!-- /popup__title -->
+                       <!-- popup__title -->
+                       <h2 class="popup__title">Вход</h2>
+                       <!-- /popup__title -->
 
-                           <input type="text" placeholder="Логин" required>
-                           <input type="password" placeholder="Пароль" required>
+                       <div class="popup__subtitle">
+                           <p>для зарегистрированных пользователей</p>
+                       </div>
 
-                           <!-- popup__content-btns -->
-                           <div class="popup__content-btns">
-                               <button class="btn" type="submit">Войти</button>
-                               <a href="#">Забыли пароль?</a>
+                       <input type="text" placeholder="Логин(электронная почта)" required>
+                       <input type="password" placeholder="Пароль" required>
+
+                       <!-- popup__content-btns -->
+                       <div class="popup__content-btns">
+                           <div class="nice-checkbox">
+                               <input type="checkbox" id="ch2" required>
+                               <label for="ch2">Запомнить</label>
                            </div>
-                           <!-- /popup__content-btns -->
+                           <button class="btn" type="submit">Войти</button>
                        </div>
-                       <!-- /popup__content-column -->
+                       <!-- /popup__content-btns -->
 
-                       <!-- popup__content-column -->
-                       <div class="popup__content-column">
-                           <!-- popup__title -->
-                           <h2 class="popup__title">У меня нет аккаунта</h2>
-                           <!-- /popup__title -->
-
-                           <ul>
-                               <li><a href="#">Демо-режим</a></li>
-                               <li><a href="#">Полная версия на 14 дней</a></li>
-                               <li><a href="#">Выбрать тарифный план</a></li>
-                           </ul>
-
-                           <p>Вы можете выбрать одиниз трёх вариантов попробовать сервис</p>
+                       <!-- popup__content-footer -->
+                       <div class="popup__content-footer">
+                           <p><a href="#" class="popup__open" data-popup="reset">Забыли пароль или почту?</a></p>
+                           <p><a href="#" class="popup__open" data-popup="registration">Регистрация</a>, если Вы здесь впервые</p>
                        </div>
-                       <!-- /popup__content-column -->
+                       <!-- /popup__content-footer -->
+
+                   </form>
+                   <!-- /login -->
+
+                </div>
+                <!-- /popup__content -->
+
+                <!-- popup__content -->
+                <div class="popup__content popup__registration">
+
+                    <a href="#" class="popup__close"></a>
+
+                   <!-- login -->
+                   <form action="#" class="registration">
+
+                       <!-- popup__title -->
+                       <h2 class="popup__title">Регистрация</h2>
+                       <!-- /popup__title -->
+
+                       <div class="popup__subtitle">
+                           <p>Уважаемые коллеги!</p>
+                           <p>Для полного доступа к сайту просим Вас зарегистрироваться:</p>
+                       </div>
+
+                       <input type="text" placeholder="Фамилия" required>
+                       <input type="text" placeholder="Имя" required>
+                       <input type="text" placeholder="Отчество" required>
+                       <input type="email" placeholder="Ваш e-mail, который будет Вашим логином" required>
+                       <input type="password" placeholder="Создайте, пожалуйста, пароль" required>
+                       <input type="password" placeholder="Повторите, пожалуйста, пароль" required>
+
+                       <div class="nice-checkbox">
+                           <input type="checkbox" id="ch1" required>
+                           <label for="ch1">
+                               Я принимаю условия
+                               <span>Пользовательского соглашения</span>
+                           </label>
+                       </div>
+
+                       <button class="btn" type="submit">Подтверить e-mail</button>
 
                    </form>
                    <!-- /login -->
@@ -171,29 +208,18 @@
                    <!-- reset -->
                    <form action="#" class="reset">
 
-                       <!-- popup__content-column -->
-                       <div class="popup__content-column">
-                           <!-- popup__title -->
-                           <h2 class="popup__title">Восстановление пароля</h2>
-                           <!-- /popup__title -->
+                       <!-- popup__title -->
+                       <h2 class="popup__title">Восстановление пароля</h2>
+                       <!-- /popup__title -->
 
-                           <input type="email" placeholder="Адрес почты" required>
+                       <input type="email" placeholder="Ваш e-mail" required>
 
-                           <!-- popup__content-btns -->
-                           <div class="popup__content-btns">
-                               <button class="btn" type="submit">Восстановить пароль</button>
-                               <a href="#">Войти</a>
-                           </div>
-                           <!-- /popup__content-btns -->
+                       <!-- popup__content-btns -->
+                       <div class="popup__content-btns">
+                           <button class="btn" type="submit">Восстановить пароль</button>
+                           <a href="#" class="popup__open" data-popup="login">Войти</a>
                        </div>
-                       <!-- /popup__content-column -->
-
-                       <!-- popup__content-column -->
-                       <div class="popup__content-column">
-                           <p>На вашу почту прийдёт ссылка для восстановления пароля.</p>
-                           <p>Перейдите по ней и установите новый пароль</p>
-                       </div>
-                       <!-- /popup__content-column -->
+                       <!-- /popup__content-btns -->
 
                    </form>
                    <!-- /reset -->
@@ -210,11 +236,14 @@
                    <form action="#" class="success">
 
                        <!-- popup__title -->
-                       <h2 class="popup__title">Удачного вам пользования сервисом!</h2>
+                       <h2 class="popup__title">Восстановление пароля</h2>
                        <!-- /popup__title -->
 
-                       <p>Мы отправили на вашу почту ссылку для восстановления пароля.</p>
-                       <p>Перейдите по ней и установите новый пароль</p>
+                       <div class="popup__subtitle">
+                           <p>Запрос на сброс пароля успешен.</p>
+                           <p>На ваш e-mail отправлено письмо длясброса пароля. Перейдите по ссылке в письмеи
+                               установите новый пароль.</p>
+                       </div>
 
                        <button class="btn" type="submit">Войти</button>
 
@@ -233,12 +262,11 @@
                    <form action="#" class="thanks">
 
                        <!-- popup__title -->
-                       <h2 class="popup__title">Спасибо за регистрацию</h2>
+                       <h2 class="popup__title">Регистрация</h2>
                        <!-- /popup__title -->
 
-                       <p>Наш менеджер свяжется с вами в ближайшеевремя для уточнения деталей.</p>
-
-                       <button class="btn" type="submit">Закрыть</button>
+                       <p>Вам на почту было отправлено письмо с информацией для подтвержения.</p>
+                       <p>Перейдите по ссылке в письме для дальнейшей работы с сайтом</p>
 
                    </form>
                    <!-- /thanks -->
