@@ -1,4 +1,6 @@
-.btn {
+.site .btn,
+.site a.btn,
+.site button.btn {
   @include inline-flex();
   @include flex-direction();
   @include justify-content(center);
@@ -10,6 +12,7 @@
   padding-bottom: 2px;
   border-radius: 4px;
   color: #fff;
+  text-decoration: none;
   font-size: 13px;
   line-height: 16px;
   background: #0a4c84;
@@ -18,10 +21,12 @@
 
   &:hover {
     background: #1762a0;
+    color: #fff;
   }
 
   &:active {
     background: #004074;
+    color: #fff;
   }
 
 }

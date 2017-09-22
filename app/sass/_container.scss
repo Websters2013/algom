@@ -1,0 +1,42 @@
+.container {
+
+  h1 {
+    margin-bottom: 25px;
+  }
+
+  p {
+    margin-bottom: 8px;
+    max-width: 520px;
+  }
+
+  .attention {
+    p {
+      margin-bottom: 0;
+    }
+  }
+
+  .nice-radio {
+    margin: 0 0 3px 0;
+
+    label {
+      font-size: 15px;
+    }
+  }
+
+  .btns {
+    padding: 25px 0 0 0;
+
+    .btn {
+      height: 34px !important;
+      min-width: 180px !important;
+      padding: 0 20px !important;
+    }
+  }
+}
+@media (min-width: $tablet-portrait) {
+
+  .container {
+
+  }
+
+}

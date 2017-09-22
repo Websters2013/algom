@@ -9,6 +9,7 @@
 
     <title>Title</title>
 
+    <link rel="stylesheet" href="css/perfect-scrollbar.css">
     <link rel="stylesheet" href="css/inner.css">
 
 </head>
@@ -80,102 +81,116 @@
                             <a href="#">Обратная связь</a>
                         </div>
 
-                        <h1>Уважаемые коллеги!</h1>
+                    </article>
+                    <!-- /single-post -->
+
+                    <!-- container -->
+                    <div class="container">
+                        <h1>&lt;Пробный доступ&gt;</h1>
+
+                        <!-- attention -->
+                        <div class="attention">
+                            <p>Система поддержки врачебных решений АЛГОМ предназначена только для дипломированных
+                                врачей. Поэтому просим Вас заполнить короткую анкету.</p>
+                            <p>Мы не разглашаем эту информацию третьим лицам в соответствии с Федеральным законом
+                                №152-ФЗ «О персональных данных».</p>
+                        </div>
+                        <!-- /attention -->
 
                         <!-- site__form -->
-                        <form action="#" class="site__form">
-
-                            <p>Для полного доступа к сайту просим Вас зарегистрироваться или авторизоваться, если Вы уже
-                                регистрировались ранее:</p>
+                        <form action="#" class="site__form columns">
 
                             <div class="site__form-wrap">
-                                <input type="text" placeholder="Логин(электронная почта)" required>
-                                <input type="password" placeholder="Пароль" required>
 
-                                <!-- site__form-btns -->
-                                <div class="site__form-btns">
-                                    <button class="btn" type="submit">Войти</button>
-                                    <a href="#" class="popup__open" data-popup="registration">Регистрация, если Вы здесь впервые</a>
+                                <div class="site__form-block">
+                                    <!-- site__form-row -->
+                                    <div class="site__form-row">
+                                        <label for="surname">Фамилия</label>
+                                        <input id="surname" type="text" required>
+                                    </div>
+                                    <!-- /site__form-row -->
+                                    <!-- site__form-row -->
+                                    <div class="site__form-row">
+                                        <label for="name">Имя</label>
+                                        <input id="name" type="text" required>
+                                    </div>
+                                    <!-- /site__form-row -->
+                                    <!-- site__form-row -->
+                                    <div class="site__form-row">
+                                        <label for="lastName">Отчество</label>
+                                        <input id="lastName" type="text" required>
+                                    </div>
+                                    <!-- /site__form-row -->
                                 </div>
-                                <!-- /site__form-btns -->
+
+                                <div class="site__form-block">
+                                    <!-- site__form-row -->
+                                    <div class="site__form-row">
+                                        <label for="item1">ВУЗ</label>
+                                        <input id="item1" type="text" required>
+                                    </div>
+                                    <!-- /site__form-row -->
+                                    <!-- site__form-row -->
+                                    <div class="site__form-row">
+                                        <label for="item2">Специальность</label>
+                                        <input id="item2" type="text" required>
+                                    </div>
+                                    <!-- /site__form-row -->
+                                    <!-- site__form-row -->
+                                    <div class="site__form-row">
+                                        <label for="year">Год окончания</label>
+                                        <input id="year" type="text" required>
+                                    </div>
+                                    <!-- /site__form-row -->
+                                </div>
+
+                                <div class="site__form-block">
+                                    <!-- site__form-row -->
+                                    <div class="site__form-row">
+                                        <label for="region">Регион</label>
+                                        <select id="region">
+                                            <option value="0">Регион</option>
+                                            <option value="1">Регион 1</option>
+                                            <option value="2">Регион 2</option>
+                                            <option value="3">Регион 3</option>
+                                            <option value="4">Регион 4</option>
+                                        </select>
+                                    </div>
+                                    <!-- /site__form-row -->
+                                    <!-- site__form-row -->
+                                    <div class="site__form-row">
+                                        <label for="city">Город</label>
+                                        <select id="city">
+                                            <option value="0">Город</option>
+                                            <option value="1">Город 1</option>
+                                            <option value="2">Город 2</option>
+                                            <option value="3">Город 3</option>
+                                            <option value="4">Город 4</option>
+                                        </select>
+                                    </div>
+                                    <!-- /site__form-row -->
+                                    <!-- site__form-row -->
+                                    <div class="site__form-row">
+                                        <label for="work">Место работы</label>
+                                        <input id="work" type="text" required>
+                                    </div>
+                                    <!-- /site__form-row -->
+                                    <!-- site__form-row -->
+                                    <div class="site__form-row">
+                                        <label for="position">Должность</label>
+                                        <input id="position" type="text" required>
+                                    </div>
+                                    <!-- /site__form-row -->
+                                </div>
+
+                                <div class="btns">
+                                    <button class="btn" type="submit">Получить доступ</button>
+                                </div>
                             </div>
                         </form>
                         <!-- /site__form -->
-
-                        <a href="#">Рекомендации АЛГОМ</a>
-
-                        <!-- single-post -->
-                        <div class="single-post__info">
-                            <dl>
-                                <dt>Автор: </dt>
-                                <dd>Katariina Kainulainen</dd>
-                            </dl>
-                            <dl>
-                                <dt>Под редакцией:</dt>
-                                <dd>Hanna Nohynek и Heli Siikamäki</dd>
-                            </dl>
-                        </div>
-                        <!-- single-post -->
-
-                        <!-- single-post__themes -->
-                        <div class="single-post__themes">
-                            <div><a href="#">Болезнь Келлера I</a></div>
-                            <div><a href="#">Болезнь Севера (Эпифизит пяточной кости)</a></div>
-                            <div><a href="#">Болезнь Фрейберга (Болезнь Келлера II)</a></div>
-                            <div><a href="#">Добавочная ладьевидная кость стопы (os tibiale externum)</a></div>
-                            <div><a href="#">Плоскостопие (плосковальгусная стопа)</a></div>
-                            <div><a href="#">Нормативные документы</a></div>
-                            <div><a href="#">Дополнительные ресурсы</a></div>
-                        </div>
-                        <!-- /single-post__themes -->
-
-                        <ul>
-                            <li>Боль в переднем отделе стопы (метатарзалгия), стрессовый перелом костей плюсны и болезнь Мортона, встречающиеся в основном у взрослых: см. <span class="single-post__footnote">1</span></li>
-                            <li>Вальгусная деформация большого пальца стопы: см. <span class="single-post__footnote">2</span></li>
-                        </ul>
-                        <h2>Болезнь Келлера I</h2>
-                        <ul>
-                            <li>Крайне редкий асептический некроз ладьевидной кости стопы у детей от 3 до 7 лет.</li>
-                            <li>Список симптомов включает в себя боль, опухание проксимального отдела стопы и хромоту. Нагрузка на стопу усугубляет симптомы.</li>
-                            <li>Диагностика заболевания основана на результатах рентгенологического исследования: ладьевидная кость выглядит недоразвитой и фрагментированной. Необходимо сравнить рентгенограммы обеих стоп.</li>
-                            <li>Выздоровление наступает самопроизвольно. Для ослабления боли можно наложить гипсовую повязку на короткое время (до 1 месяца).</li>
-                        </ul>
-                        <h2>Болезнь Севера (Эпифизит пяточной кости)</h2>
-                        <ul>
-                            <li>Боль в месте прикрепления ахиллова сухожилия у детей (7-14 лет). Обычно боль отмечается с двух сторон.</li>
-                            <li>Состояние усугубляется физической нагрузкой.</li>
-                            <li>При пальпации боковые стороны пяточной кости болезненные, но не опухшие.</li>
-                            <li>При типичном характере субъективных и объективных симптомов рентгенография не обязательна.</li>
-                            <li>На рентгенограммах может определяться склероз и неровность контуров бугра пяточной кости, которые, однако, иногда видны и при отсутствии симптомов.</li>
-                            <li>Боли проходят самопроизвольно в подростковом возрасте. В менее тяжелых случаях достаточно снижения нагрузки на пятку. При лёгком течении заболевания больной должен избегать прыжков и бега в течение 6 недель.В тяжёлых случаях может потребоваться иммобилизация стопы гипсовой повязкой.</li>
-                        </ul>
-                        <h2>Болезнь Севера (Эпифизит пяточной кости)</h2>
-                        <ul>
-                            <li>Боль в месте прикрепления ахиллова сухожилия у детей (7-14 лет). Обычно боль отмечается с двух сторон.</li>
-                            <li>Состояние усугубляется физической нагрузкой.</li>
-                            <li>При пальпации боковые стороны пяточной кости болезненные, но не опухшие.</li>
-                            <li>При типичном характере субъективных и объективных симптомов рентгенография не обязательна.</li>
-                            <li>На рентгенограммах может определяться склероз и неровность контуров бугра пяточной кости, которые, однако, иногда видны и при отсутствии симптомов.</li>
-                            <li>Боли проходят самопроизвольно в подростковом возрасте. В менее тяжелых случаях достаточно снижения нагрузки на пятку. При лёгком течении заболевания больной должен избегать прыжков и бега в течение 6 недель.В тяжёлых случаях может потребоваться иммобилизация стопы гипсовой повязкой.</li>
-                        </ul>
-
-                        <div class="single-post__info single-post__info_footer">
-                            <dl>
-                                <dt>Последний пересмотр и обновление: </dt>
-                                <dd><time datetime="2017-02-14">14.2.2017</time></dd>
-                            </dl>
-                            <dl>
-                                <dt>Последнее изменение:</dt>
-                                <dd><time datetime="2013-11-11">11.11.2013</time></dd>
-                            </dl>
-                            <dl>
-                                <dt>Номер статьи:</dt>
-                                <dd>ebr00144 (002.010)</dd>
-                            </dl>
-                        </div>
-
-                    </article>
-                    <!-- /single-post -->
+                    </div>
+                    <!-- /container -->
 
                 </div>
                 <!-- /content -->
@@ -720,6 +735,7 @@
     <!-- /site -->
 
     <script src="js/vendors/jquery-2.2.1.min.js"></script>
+    <script src="js/vendors/perfect-scrollbar.jquery.min.js"></script>
     <script src="js/index.min.js"></script>
 </body>
 </html>
