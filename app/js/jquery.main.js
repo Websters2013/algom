@@ -260,7 +260,9 @@
 
                     } else {
 
-                        $('.site__content-wrap').find('>div').width('57%');
+                        if (!$('.site__content-wrap').find('>div').hasClass('content')) {
+                            $('.site__content-wrap').find('>div').width('57%');
+                        }
 
                     }
 

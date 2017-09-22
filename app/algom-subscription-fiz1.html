@@ -85,25 +85,70 @@
 
                     <!-- container -->
                     <div class="container">
-                        <h1>Уважаемые коллеги!</h1>
+                        <h1>Пожалуйста, выберите срок подписки</h1>
 
                         <!-- site__form -->
                         <form action="#" class="site__form">
 
-                            <p>Для полного доступа к сайту просим Вас зарегистрироваться или авторизоваться, если Вы уже
-                                регистрировались ранее:</p>
-
-                            <div class="site__form-wrap">
-                                <input type="text" placeholder="Логин(электронная почта)" required>
-                                <input type="password" placeholder="Пароль" required>
-
-                                <!-- btns -->
-                                <div class="btns">
-                                    <button class="btn" type="submit">Войти</button>
-                                    <a href="#" class="popup__open" data-popup="registration">Регистрация, если Вы здесь впервые</a>
+                            <!-- plans -->
+                            <div class="plans">
+                                <!-- plans__item -->
+                                <div class="plans__item">
+                                    <input id="plans1" type="radio" value="1" name="plans" required>
+                                    <!-- plans__item-wrap -->
+                                    <label for="plans1" class="plans__item-wrap">
+                                        <!-- plans__head -->
+                                        <div class="plans__head">
+                                            <strong>3 месяца</strong>
+                                            <span>800 <span>руб.</span></span>
+                                        </div>
+                                        <!-- /plans__head -->
+                                    </label>
+                                    <!-- /plans__item-wrap -->
                                 </div>
-                                <!-- /btns -->
+                                <!-- /plans__item -->
+                                <!-- plans__item -->
+                                <div class="plans__item">
+                                    <input id="plans2" type="radio" value="2" name="plans" required>
+                                   <!-- plans__item-wrap -->
+                                   <label for="plans2" class="plans__item-wrap">
+                                       <!-- plans__head -->
+                                       <div class="plans__head">
+                                           <strong>6 месяцев</strong>
+                                           <span>1200 <span>руб.</span></span>
+                                       </div>
+                                       <!-- /plans__head -->
+                                       <p>АКЦИЯ! Оплатите подписку на 6 месяцев со скидкой 20% за ZZZ руб. и гарантией
+                                           возврата денег в течении месяца, если система Вам не понравится.</p>
+                                   </label>
+                                   <!-- /plans__item-wrap -->
+                                </div>
+                                <!-- /plans__item -->
+                                <!-- plans__item -->
+                                <div class="plans__item">
+                                    <input id="plans3" type="radio" value="3" name="plans" required>
+                                    <!-- plans__item-wrap -->
+                                    <label for="plans3" class="plans__item-wrap">
+                                        <!-- plans__head -->
+                                        <div class="plans__head">
+                                            <strong>12 месяцев</strong>
+                                            <span>2400 <span>руб.</span></span>
+                                        </div>
+                                        <!-- /plans__head -->
+                                        <p>АКЦИЯ! Оплатите подписку на 12 месяцев со скидкой 30% за ZZZ руб. и гарантией
+                                            возврата денег в течении месяца, если система Вам не понравится.</p>
+                                    </label>
+                                    <!-- /plans__item-wrap -->
+                                </div>
+                                <!-- /plans__item -->
                             </div>
+                            <!-- /plans -->
+
+                            <!-- btns -->
+                            <div class="btns right">
+                                <button class="btn" type="submit">Продолжить</button>
+                            </div>
+                            <!-- /btns -->
                         </form>
                         <!-- /site__form -->
                     </div>
