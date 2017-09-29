@@ -1,8 +1,6 @@
 .logo {
   @include absoluteCenterX();
   top: 20px;
-  width: 250px;
-  height: 30px;
   transition: opacity 0.3s ease-in-out;
 
   img {
@@ -23,8 +21,6 @@ a.logo {
   .logo {
     @include absoluteCenterY();
     left: 14px;
-    width: 314px;
-    height: 38px;
   }
 
 }
