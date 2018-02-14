@@ -8,6 +8,12 @@
 
         } );
 
+        $('.search-count').each(function () {
+
+            new SearchCount( $(this) );
+
+        } );
+
     } );
 
     var Search = function (obj) {
@@ -207,6 +213,8 @@
                     type: "get",
                     success: function ( msg ) {
 
+                        console.log(msg);
+                        
                         if( Object.keys(msg).length != 0 ) {
                             _addData( msg );
                         }
@@ -233,6 +241,49 @@
 
                 } );
 
+            },
+            _init = function () {
+                _addEvents();
+            };
+
+        //public properties
+
+        //public methods
+
+        _init();
+    };
+
+    var SearchCount = function (obj) {
+
+        //private properties
+        var _obj = obj,
+            _showResult = _obj.find('.search-count__show-results'),
+            _searchResult = _obj.parent().find('.search-results');
+
+        //private methods
+
+        var _addEvents = function () {
+
+                _showResult.on({
+                    'click': function () {
+                     if ( _showResult.hasClass('active') ) {
+                         _hideResults();
+                     } else {
+                         _showResults();
+                     }
+                    }
+                });
+
+            },
+            _showResults = function () {
+
+                _showResult.addClass('active');
+                _searchResult.slideDown();
+            },
+            _hideResults = function () {
+
+                _showResult.removeClass('active');
+                _searchResult.slideUp();
             },
             _init = function () {
                 _addEvents();

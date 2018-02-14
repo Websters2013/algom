@@ -13,57 +13,65 @@
   color: #000;
   @include main-font2();
 
-  &__print,
-  &__download {
-    position: fixed;
-    z-index: 3;
-    @include flexbox();
-    @include flex-direction();
-    @include align-items(center);
-    top: 200px;
-    left: 0;
-    padding: 0 0 0 12px;
-    width: 35px;
-    height: 34px;
-    border-radius: 0 4px 4px 0;
-    background: #024b86;
-    white-space: nowrap;
-    color: #fff;
-    font-size: 13px;
-    line-height: 13px;
-    @include main-font1();
-    transition: background 0.3s ease-in-out, width 0.3s ease-in-out;
+  &__buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-    &:hover {
-      background-color: #1762a0;
-    }
+    a,
+    a:visited {
+      @include flexbox();
+      @include flex-direction();
+      @include align-items(center);
+      top: 200px;
+      left: 0;
+      padding: 0 0 0 12px;
+      width: 35px;
+      height: 34px;
+      margin: 10px;
+      border-radius: 4px;
+      background-color: #024b86;
+      background-repeat: no-repeat;
+      white-space: nowrap;
+      color: #fff;
+      font-size: 13px;
+      line-height: 13px;
+      @include main-font1();
+      transition: background 0.3s ease-in-out, width 0.3s ease-in-out;
 
-    &:active {
-      background-color: #004074;
-    }
-
-    span {
-      opacity: 0;
-      transition: opacity 0.3s ease-in-out;
-    }
-
-    &:hover {
-      width: 126px;
-
-      span {
-        opacity: 1;
+      &:hover {
+        background-color: #1762a0;
       }
 
+      &:active {
+        background-color: #004074;
+      }
+
+      span {
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out;
+      }
+
+      &:hover {
+        width: 126px;
+
+        span {
+          opacity: 1;
+        }
+
+      }
     }
 
   }
+
   &__print {
-    background: url("../img/print.png") no-repeat calc(100% - 10px) center #024b86;
+    background-image: url("../img/print.png");
+    background-position: calc(100% - 10px) center;
     background-size: 17px 16px;
   }
   &__download {
-    top: 245px;
-    background: url("../img/download.png") no-repeat calc(100% - 12px) center #024b86;
+    background-image: url("../img/download.png");
+    background-position: calc(100% - 12px) center;
     background-size: 13px 16px;
   }
   &__header {
@@ -181,10 +189,8 @@
   &__content {
     position: relative;
     max-width: 1008px;
-    padding: 0 14px;
+    padding: 32px 14px 22px;
     margin: 0 auto;
-    padding-top: 32px;
-    padding-bottom: 60px;
 
     &-wrap {
       @include flexbox();
@@ -259,20 +265,23 @@
 
   }
   &__aside {
-    overflow: hidden;
+    //overflow: hidden;
     height: 0;
     min-height: 0;
     position: relative;
+    margin-bottom: 40px;
     transition: all 0.5s ease-in-out;
 
     >div {
       border: 1px solid #d9d9d9;
       background: #f5f5f5;
       border-radius: 3px;
-      margin-bottom: 40px;
     }
 
+    .social-list { display: none }
+
     &-hide {
+      display: none;
       position: absolute;
       top: 4px;
       z-index: 3;
@@ -409,6 +418,30 @@
 @media (min-width: $tablet-portrait) {
   .site {
 
+    &__buttons {
+
+      a {
+        position: fixed;
+        z-index: 3;
+        border-radius: 0 4px 4px 0;
+        margin: 0;
+
+        &.site__download { top: 245px }
+      }
+    }
+
+    &__content {
+
+      .social-list { display: none }
+    }
+
+    &__aside {
+
+      &-hide { display: block }
+
+      .social-list { display: block }
+    }
+
     &__header {
       text-align: left;
 
@@ -447,6 +480,7 @@
       }
 
     }
+
     &__footer {
       height: 40px;
 
@@ -572,4 +606,32 @@
 
     .btn { margin-bottom: 0 }
   }
+}
+
+
+.social-list{
+  padding-top: 15px;
+  border: none !important;
+  background: none !important;
+  text-align: center;
+}
+
+.social-list a{
+  display: inline-block;
+  background-size: cover;
+  width: 30px;
+  height: 30px;
+  margin: 0 5px;
+}
+
+.social-list .vk{
+  background: url(../img/icons/vk2.png);
+}
+
+.social-list .fb{
+  background: url(../img/icons/fb2.png);
+}
+
+.social-list .ok{
+  background: url(../img/icons/ok2.png);
 }

@@ -1,8 +1,10 @@
 .search {
   position: relative;
-  margin-bottom: 18px;
   padding: 8px 17px 19px 17px;
-  border-bottom: 1px solid #d9d9d9;
+
+  &.has-result {
+    border-bottom: 1px solid #d9d9d9;
+  }
 
   &__history {
     display: inline-block;
@@ -21,7 +23,7 @@
     opacity: 0;
     visibility: hidden;
     position: absolute;
-    z-index: 2;
+    z-index: 4;
     top: 34px;
     left: 0;
     right: 0;
