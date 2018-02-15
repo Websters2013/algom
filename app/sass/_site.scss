@@ -13,57 +13,6 @@
   color: #000;
   @include main-font2();
 
-  &__buttons {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    a,
-    a:visited {
-      @include flexbox();
-      @include flex-direction();
-      @include align-items(center);
-      top: 200px;
-      left: 0;
-      padding: 0 0 0 12px;
-      width: 35px;
-      height: 34px;
-      margin: 10px;
-      border-radius: 4px;
-      background-color: #024b86;
-      background-repeat: no-repeat;
-      white-space: nowrap;
-      color: #fff;
-      font-size: 13px;
-      line-height: 13px;
-      @include main-font1();
-      transition: background 0.3s ease-in-out, width 0.3s ease-in-out;
-
-      &:hover {
-        background-color: #1762a0;
-      }
-
-      &:active {
-        background-color: #004074;
-      }
-
-      span {
-        opacity: 0;
-        transition: opacity 0.3s ease-in-out;
-      }
-
-      &:hover {
-        width: 126px;
-
-        span {
-          opacity: 1;
-        }
-
-      }
-    }
-
-  }
-
   &__print {
     background-image: url("../img/print.png");
     background-position: calc(100% - 10px) center;
@@ -269,7 +218,7 @@
     height: 0;
     min-height: 0;
     position: relative;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
     transition: all 0.5s ease-in-out;
 
     >div {
@@ -418,17 +367,52 @@
 @media (min-width: $tablet-portrait) {
   .site {
 
-    &__buttons {
+    &__download,
+    &__print {
+      position: fixed;
+      z-index: 3;
+      @include flexbox();
+      @include flex-direction();
+      @include align-items(center);
+      top: 200px;
+      left: 0;
+      padding: 0 0 0 12px;
+      width: 35px;
+      height: 34px;
+      border-radius: 0 4px 4px 0;
+      background-color: #024b86;
+      background-repeat: no-repeat;
+      white-space: nowrap;
+      color: #fff;
+      font-size: 13px;
+      line-height: 13px;
+      @include main-font1();
+      transition: background 0.3s ease-in-out, width 0.3s ease-in-out;
 
-      a {
-        position: fixed;
-        z-index: 3;
-        border-radius: 0 4px 4px 0;
-        margin: 0;
+      &:hover {
+        background-color: #1762a0;
+      }
 
-        &.site__download { top: 245px }
+      &:active {
+        background-color: #004074;
+      }
+
+      span {
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out;
+      }
+
+      &:hover {
+        width: 126px;
+
+        span {
+          opacity: 1;
+        }
+
       }
     }
+
+    &__download { top: 245px }
 
     &__content {
 

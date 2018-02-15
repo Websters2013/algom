@@ -86,17 +86,15 @@
 }
 
 @media (min-width: $tablet-portrait) {
-
   .search-results {
+    display: block !important;
+    padding-top: 17px;
 
     &__categories {
 
       >div {
         width: 48%;
       }
-
     }
-
   }
-
 }

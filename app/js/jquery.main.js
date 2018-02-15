@@ -219,6 +219,12 @@
                     }
                 } );
 
+                $(window).on({
+                    'resize': function () {
+                        _checkMenu();
+                    }
+                });
+
             },
             _closeMenu = function() {
 
@@ -268,6 +274,8 @@
 
                     }
 
+                } else {
+                    $('.site__content-wrap').find('>div').width('100%');
                 }
 
             },

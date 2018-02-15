@@ -54,7 +54,11 @@
   }
 }
 @media (min-width: $tablet-portrait) {
-  .search-count {
+  .has-result+.search-count {
+    display: none;
+  }
 
+  .search-count {
+    display: none;
   }
 }
